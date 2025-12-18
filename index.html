@@ -3,175 +3,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Haworth Men's Shed | Community & Craft</title>
+    <title>Haworth Men's Shed</title>
     <style>
-        /* Modern CSS Reset & Styling */
+        :root {
+            --shed-orange: #f39c12;
+            --shed-dark: #2c2c2c;
+            --bg-gray: #f9f9f9;
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
+            background-color: #e0e0e0; /* Background shadow effect */
             color: #333;
-            background-color: #f4f4f4;
         }
 
-        /* Header & Logo */
+        /* Main Wrapper to simulate the card-style website */
+        .page-wrapper {
+            max-width: 1100px;
+            margin: 40px auto;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        /* Top Navigation Bar */
         header {
-            background: #2c2c2c;
-            color: white;
-            padding: 1rem 0;
-            text-align: center;
-            border-bottom: 5px solid #f39c12; /* Matches logo orange */
-        }
-
-        .logo-container img {
-            max-width: 250px;
-            height: auto;
-        }
-
-        /* Navigation */
-        nav {
-            background: #333;
+            background: var(--shed-dark);
             color: white;
             display: flex;
-            justify-content: center;
-            padding: 0.5rem;
+            align-items: center;
+            padding: 10px 40px;
+            justify-content: space-between;
         }
 
-        nav a {
+        .logo-box img {
+            height: 80px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
             color: white;
             text-decoration: none;
-            padding: 0 15px;
+            padding: 15px 20px;
             font-weight: bold;
+            font-size: 0.9rem;
+            text-transform: uppercase;
         }
 
-        nav a:hover {
-            color: #f39c12;
+        nav ul li a:hover {
+            color: var(--shed-orange);
+        }
+
+        .btn-donate {
+            background: var(--shed-orange);
+            color: white !important;
+            border-radius: 4px;
+            margin-left: 10px;
         }
 
         /* Hero Section */
         .hero {
-            background: white;
-            padding: 4rem 2rem;
-            text-align: center;
+            padding: 50px 40px;
+            border-bottom: 1px solid #eee;
         }
 
         .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+            font-size: 2.2rem;
+            margin: 0 0 10px 0;
         }
 
-        /* Main Content */
-        .container {
-            max-width: 1000px;
-            margin: 2rem auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 30px;
+        .hero p {
+            color: #666;
+            font-size: 1.1rem;
         }
 
-        .card {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-        }
-
-        /* Buttons */
-        .btn {
-            display: inline-block;
-            background: #f39c12;
+        .btn-join {
+            background: var(--shed-orange);
             color: white;
-            padding: 10px 20px;
+            padding: 12px 25px;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-top: 15px;
             font-weight: bold;
-            margin-top: 10px;
         }
 
-        .btn:hover {
-            background: #e67e22;
+        /* Main Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 300px;
+            gap: 40px;
+            padding: 40px;
         }
 
+        h3 {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .section-box ul {
+            padding-left: 20px;
+        }
+
+        .section-box li {
+            margin-bottom: 8px;
+        }
+
+        /* Sidebar Styling */
+        .sidebar-item {
+            margin-bottom: 30px;
+        }
+
+        .map-placeholder {
+            background: #eee;
+            height: 150px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            margin: 10px 0;
+        }
+
+        /* Forms/Contact Simple Styling */
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        /* Footer */
         footer {
-            text-align: center;
-            padding: 2rem;
-            background: #2c2c2c;
-            color: white;
-            margin-top: 40px;
+            background: #fff;
+            padding: 20px 40px;
+            border-top: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: #888;
         }
 
-        /* Responsive design for phones */
-        @media (max-width: 768px) {
-            .container {
+        @media (max-width: 900px) {
+            .content-grid {
                 grid-template-columns: 1fr;
+            }
+            header {
+                flex-direction: column;
+                text-align: center;
             }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo-container">
-            <img src="logo.jpg" alt="Haworth Men's Shed Logo">
-        </div>
-    </header>
-
-    <nav>
-        <a href="#about">About Us</a>
-        <a href="#activities">Activities</a>
-        <a href="#contact">Contact</a>
-        <a href="#" style="color: #f39c12;">Donate</a>
-    </nav>
-
-    <section class="hero">
-        <h1>Welcome to Haworth Men's Shed</h1>
-        <p>A place to pursue practical interests, share skills, and enjoy a bit of tea and banter.</p>
-        <a href="#contact" class="btn">Join Our Community</a>
-    </section>
-
-    <div class="container">
-        <main>
-            <section id="about" class="card">
-                <h2>What is a Men's Shed?</h2>
-                <p>Haworth Men's Shed is a community space where men can connect, create, and converse. We provide the tools and the space to work on projects at your own pace, in a friendly and inclusive environment.</p>
-                <p>Whether you are a master craftsman or just looking for a chat and a project to tinker with, there is a place for you here.</p>
-            </section>
-
-            <section id="activities" class="card">
-                <h2>Activities & Projects</h2>
+    <div class="page-wrapper">
+        <header>
+            <div class="logo-box">
+                <img src="logo.jpg" alt="Haworth Men's Shed">
+            </div>
+            <nav>
                 <ul>
-                    <li>Woodworking and Furniture Repair</li>
-                    <li>Community Gardening Projects</li>
-                    <li>Metalwork and DIY</li>
-                    <li>Restoration of local landmarks</li>
-                    <li>Simply having a coffee and a catch-up</li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Activities</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#" class="btn-donate">Donate</a></li>
                 </ul>
-            </section>
-        </main>
+            </nav>
+        </header>
 
-        <aside>
-            <div class="card">
-                <h3>Opening Hours</h3>
-                <p><strong>Tuesday:</strong> 10am - 4pm<br>
-                <strong>Thursday:</strong> 10am - 4pm<br>
-                <strong>Saturday:</strong> 10am - 1pm</p>
+        <section class="hero">
+            <h1>Welcome to Haworth Men's Shed</h1>
+            <p>A place to create, build, connect, and belong.</p>
+            <a href="#" class="btn-join">Join Us!</a>
+        </section>
+
+        <div class="content-grid">
+            <div class="section-box">
+                <h3>About Us</h3>
+                <p>Haworth Men's Shed is a place where men can meet to share skills, work on projects, or simply have a cup of tea and a chat. Our aim is to promote social wellbeing and reduce isolation through practical creativity.</p>
+                
+                <h3>Support Us</h3>
+                <p>We are a registered charity and rely on your kind donations to keep our doors open.</p>
+                <a href="#" class="btn-join" style="padding: 8px 15px;">Donate Now</a>
             </div>
 
-            <div id="contact" class="card">
-                <h3>Find Us</h3>
-                <p>Haworth, Keighley<br>
-                West Yorkshire</p>
-                <p><strong>Email:</strong> info@haworthmensshed.org</p>
+            <div class="section-box">
+                <h3>Activities</h3>
+                <ul>
+                    <li>Woodworking & Furniture Repair</li>
+                    <li>Community Gardening & Allotment</li>
+                    <li>Metalwork & Electronics</li>
+                    <li>Skill-sharing Workshops</li>
+                    <li>Social Trips & Talks</li>
+                </ul>
+                
+                <h3>Location</h3>
+                <p>Find us in the heart of Haworth. We are open to all men in the Worth Valley area looking for a productive hobby.</p>
             </div>
-        </aside>
+
+            <aside>
+                <div class="sidebar-item">
+                    <h3>Location & Hours</h3>
+                    <p>Find us at: [Your Address Here]</p>
+                    <div class="map-placeholder">Map View</div>
+                    <p><strong>Tue & Thu:</strong> 10am - 4pm</p>
+                </div>
+
+                <div class="sidebar-item">
+                    <h3>Contact Us</h3>
+                    <label>Name</label>
+                    <input type="text">
+                    <label>Email</label>
+                    <input type="email">
+                    <label>Message</label>
+                    <textarea rows="3"></textarea>
+                    <button class="btn-join" style="width: 100%; border: none; cursor: pointer;">Send Message</button>
+                </div>
+            </aside>
+        </div>
+
+        <footer>
+            <div>&copy; 2024 Haworth Men's Shed. All rights reserved. Registered Charity No. [Number]</div>
+            <div>
+                Follow us: Facebook | Twitter
+            </div>
+        </footer>
     </div>
-
-    <footer>
-        <p>&copy; 2024 Haworth Men's Shed. Registered Charity No: [Insert Number]</p>
-    </footer>
 
 </body>
 </html>
