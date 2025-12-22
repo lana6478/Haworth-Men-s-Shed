@@ -44,7 +44,7 @@
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 15px 20px;
+            padding: 10px 20px; /* Reduced padding slightly to fit logo better */
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -58,15 +58,14 @@
             letter-spacing: -0.5px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 15px; /* Space between image and text */
         }
 
-        /* Placeholder for logo styling */
-        .logo-circle {
-            width: 40px; 
-            height: 40px; 
-            background: var(--primary); 
-            border-radius: 50%;
+        /* UPDATED: Logo Image Styling */
+        .logo-box img {
+            height: 55px; /* Sets a fixed height so it fits the navbar */
+            width: auto;  /* Maintains aspect ratio */
+            display: block;
         }
 
         nav ul {
@@ -297,7 +296,7 @@
     <header>
         <div class="nav-container">
             <div class="logo-box">
-                <div class="logo-circle"></div>
+                <img src="logo.jpg" alt="Haworth Men's Shed Logo">
                 Haworth Men's Shed
             </div>
             <nav>
@@ -305,7 +304,7 @@
                     <li><a href="about.html">About</a></li>
                     <li><a href="activities.html">Activities</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    </ul>
+                </ul>
             </nav>
         </div>
     </header>
@@ -322,7 +321,7 @@
             <div class="card">
                 <h3>About Us</h3>
                 <p>Haworth Men's Shed is a place where men can meet to share skills, work on projects, or simply have a cup of tea and a chat. We provide the tools and the space; you provide the creativity.</p>
-                </div>
+            </div>
 
             <div class="card">
                 <h3>What We Do</h3>
