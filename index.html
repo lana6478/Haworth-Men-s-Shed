@@ -170,26 +170,54 @@
             border-radius: 2px;
         }
 
-        .features-grid {
+        /* --- Detailed Activity Cards --- */
+        .activities-detailed {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: 1fr 1fr;
             gap: 20px;
+            margin-top: 20px;
         }
 
-        .feature-item {
-            background: var(--light);
-            padding: 15px;
+        .activity-box {
+            background: #f9fafb;
+            padding: 20px;
             border-radius: var(--radius);
-            font-weight: 600;
-            display: flex;
-            align-items: center;
+            border-left: 4px solid var(--primary);
+            transition: transform 0.2s;
         }
-        
-        .feature-item::before {
-            content: '✓';
-            color: var(--primary);
-            margin-right: 12px;
-            font-weight: 900;
+
+        .activity-box:hover {
+            transform: scale(1.02);
+            background: #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .activity-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .activity-box h4 {
+            margin: 0;
+            color: var(--dark);
+            font-size: 1.1rem;
+        }
+
+        .tag {
+            font-size: 0.7rem;
+            background: #e5e7eb;
+            padding: 3px 8px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--text-light);
+        }
+
+        .tag.social {
+            background: #dcfce7;
+            color: #166534;
         }
 
         /* --- Sidebar & Forms --- */
@@ -242,6 +270,7 @@
         @media (max-width: 900px) {
             .container { grid-template-columns: 1fr; }
             .hero h1 { font-size: 2.5rem; }
+            .activities-detailed { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -278,13 +307,40 @@
 
             <div class="card">
                 <h3>What's On at the Shed</h3>
-                <div class="features-grid">
-                    <div class="feature-item">Woodworking</div>
-                    <div class="feature-item">Metal Craft</div>
-                    <div class="feature-item">Electronics</div>
-                    <div class="feature-item">Gardening</div>
-                    <div class="feature-item">Model Making</div>
-                    <div class="feature-item">Social Events</div>
+                <p>We provide the tools and space; you provide the creativity. There is something for everyone, regardless of skill level.</p>
+                
+                <div class="activities-detailed">
+                    <div class="activity-box">
+                        <div class="activity-header">
+                            <span class="tag">Hands-on</span>
+                            <h4>Woodworking & Repair</h4>
+                        </div>
+                        <p>Our workshop is equipped for everything from birdhouse building to restoring old furniture. Bring your own project or help with community builds.</p>
+                    </div>
+
+                    <div class="activity-box">
+                        <div class="activity-header">
+                            <span class="tag">Creative</span>
+                            <h4>Metalwork & Fixing</h4>
+                        </div>
+                        <p>From basic welding and metal art to electronics repair. We share knowledge to help fix those items you thought were beyond saving.</p>
+                    </div>
+
+                    <div class="activity-box">
+                        <div class="activity-header">
+                            <span class="tag">Outdoors</span>
+                            <h4>Community Gardening</h4>
+                        </div>
+                        <p>A great way to get some fresh air while growing vegetables and flowers. Help us keep the local community blooming.</p>
+                    </div>
+
+                    <div class="activity-box">
+                        <div class="activity-header">
+                            <span class="tag social">Social</span>
+                            <h4>The "Brew & Chat"</h4>
+                        </div>
+                        <p>The most important part of the Shed. Sometimes you don't need a tool; you just need a cup of tea and a proper conversation.</p>
+                    </div>
                 </div>
             </div>
         </main>
@@ -299,7 +355,7 @@
 
             <div class="card">
                 <h3>Get in Touch</h3>
-                <form action="https://formspree.io/f/mdanwrvj" method="POST">
+                <form action="https://formspree.io/f/YOUR_ID_HERE" method="POST">
                     <label>Your Name</label>
                     <input type="text" name="name" required placeholder="Full Name">
                     
@@ -321,4 +377,3 @@
 
 </body>
 </html>
-
