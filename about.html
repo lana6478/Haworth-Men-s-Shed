@@ -3,101 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Haworth Men's Shed</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>About Us — Haworth Men's Shed</title>
+    <meta name="description" content="Learn about Haworth Men's Shed — our purpose, our values, and who's welcome to join.">
 
-    <style>
-        :root {
-            --primary: #f59e0b; 
-            --primary-hover: #d97706;
-            --dark: #1f2937;    
-            --light: #f3f4f6;   
-            --white: #ffffff;
-            --text-main: #374151;
-            --text-light: #6b7280;
-            --radius: 8px;
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        }
-
-        * { box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; margin: 0; padding: 0; background-color: var(--light); color: var(--text-main); line-height: 1.7; }
-
-        header { background: var(--white); border-bottom: 1px solid #e5e7eb; position: sticky; top: 0; z-index: 100; }
-        .nav-container { max-width: 1200px; margin: 0 auto; padding: 10px 20px; display: flex; align-items: center; justify-content: space-between; }
-        
-        .logo-box { font-weight: 700; font-size: 1.4rem; color: var(--dark); text-transform: uppercase; display: flex; align-items: center; gap: 15px; }
-        .logo-box img { height: 50px; width: auto; display: block; }
-
-        nav ul { list-style: none; display: flex; align-items: center; gap: 25px; margin: 0; padding: 0; }
-        nav ul li a { color: var(--text-main); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
-        nav ul li a:hover { color: var(--primary); }
-
-        .page-title { background: var(--dark); color: white; padding: 60px 20px; text-align: center; }
-        .page-title h1 { margin: 0; font-size: 2.5rem; }
-
-        .container { max-width: 900px; margin: 50px auto; padding: 0 20px; }
-        .about-card { background: var(--white); padding: 40px; border-radius: var(--radius); box-shadow: var(--shadow); }
-
-        h2 { color: var(--dark); margin-top: 0; }
-        h2::after { content: ''; display: block; width: 40px; height: 3px; background: var(--primary); margin-top: 10px; }
-
-        .vision-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px; }
-        .vision-item { background: var(--light); padding: 20px; border-radius: var(--radius); }
-        .vision-item h4 { margin: 0 0 10px 0; color: var(--primary); }
-
-        footer { background: var(--dark); color: #9ca3af; padding: 40px 20px; text-align: center; margin-top: 60px; }
-
-        @media (max-width: 600px) { .vision-grid { grid-template-columns: 1fr; } }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
+    <header class="site-header">
         <div class="nav-container">
-            <div class="logo-box">
-                <img src="logo.jpg" alt="Logo">
+            <a href="index.html" class="logo-box">
+                <img src="logo.jpg" alt="Haworth Men's Shed logo">
                 Haworth Men's Shed
-            </div>
-            <nav>
+            </a>
+            <nav class="main-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" aria-current="page">About</a></li>
                     <li><a href="future.html">Future</a></li>
                     <li><a href="organisers.html">Organisers</a></li>
+                    <li><a href="index.html#contact" class="nav-cta">Get in Touch</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="page-title">
-        <h1>About the Shed</h1>
+    <section class="page-banner">
+        <span class="kicker">About Us</span>
+        <h1>The Shed, and Why It Matters</h1>
+        <p>More than a workshop — a place to belong.</p>
     </section>
 
-    <div class="container">
-        <div class="about-card">
-            <h2>Our Purpose</h2>
-            <p>The Haworth Men’s Shed is more than just a workshop; it’s a place for connection. We provide a space where men can come together to work on projects, share skills, and most importantly, support one another.</p>
-            
-            <p>Men’s Sheds are vital community hubs that help combat social isolation by providing a meaningful way to spend time. Whether you’re an expert craftsman or have never held a hammer in your life, you are welcome here.</p>
+    <section class="section">
+        <div class="wrap" style="max-width: 900px;">
+            <div class="card">
+                <h2>Our Purpose</h2>
+                <p>The Haworth Men's Shed is more than just a workshop; it's a place for connection. We provide a space where men can come together to work on projects, share skills, and most importantly, support one another.</p>
 
-            <div class="vision-grid">
-                <div class="vision-item">
-                    <h4>Skill Sharing</h4>
-                    <p>Learn everything from woodworking to electronics repair from fellow members.</p>
+                <p>Men's Sheds are vital community hubs that help combat social isolation by providing a meaningful way to spend time. Whether you're an expert craftsman or have never held a hammer in your life, you are welcome here.</p>
+
+                <div class="vision-grid">
+                    <div class="vision-item">
+                        <div class="icon-badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                        </div>
+                        <h4>Skill Sharing</h4>
+                        <p>Learn everything from woodworking to electronics repair from fellow members.</p>
+                    </div>
+                    <div class="vision-item">
+                        <div class="icon-badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+                        </div>
+                        <h4>Wellbeing</h4>
+                        <p>A safe space to talk, listen, and belong to a supportive community.</p>
+                    </div>
                 </div>
-                <div class="vision-item">
-                    <h4>Wellbeing</h4>
-                    <p>A safe space to talk, listen, and belong to a supportive community.</p>
+
+                <h2 style="margin-top: 44px;">Who Can Join?</h2>
+                <p>Our doors are open to men from all walks of life in the Haworth area. If you enjoy making things, fixing things, or just having a chat over a cup of tea, the Shed is for you.</p>
+
+                <h2 style="margin-top: 44px;">How a Visit Works</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4>Turn up on an open day</h4>
+                        <p>No booking needed — just come along on a Tuesday or Thursday, 10:00 AM to 4:00 PM.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Have a cuppa and a chat</h4>
+                        <p>Meet the organisers and other members, and get a feel for the space before doing anything else.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Find a project — or bring your own</h4>
+                        <p>Join an existing project, get help with your own, or just spend time learning a new skill.</p>
+                    </div>
                 </div>
             </div>
-
-            <h2 style="margin-top: 40px;">Who Can Join?</h2>
-            <p>Our doors are open to men from all walks of life in the Haworth area. If you enjoy making things, fixing things, or just having a chat over a cup of tea, the Shed is for you.</p>
         </div>
-    </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2025 Haworth Men's Shed. Registered Charity No. 123456</p>
+    <section class="section section-alt" style="padding-top: 0;">
+        <div class="wrap">
+            <div class="cta-banner">
+                <h2>Curious? Come and see for yourself.</h2>
+                <p>We'd love to show you around and introduce you to the team.</p>
+                <a href="index.html#contact" class="btn btn-outline">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div>
+                <div class="footer-brand">
+                    <img src="logo.jpg" alt="Haworth Men's Shed logo">
+                    Haworth Men's Shed
+                </div>
+                <p>A community workshop in Haworth for sharing skills, staying active, and making new friends.</p>
+            </div>
+            <div>
+                <h5>Explore</h5>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="future.html">Future</a></li>
+                    <li><a href="organisers.html">Organisers</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5>Visit</h5>
+                <ul>
+                    <li><a href="index.html#contact">Tuesday & Thursday</a></li>
+                    <li><a href="index.html#contact">10:00 AM – 4:00 PM</a></li>
+                    <li><a href="index.html#contact">Contact the Organisers</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="footer-bottom">&copy; 2025 Haworth Men's Shed. Registered Charity No. 123456</p>
     </footer>
 
 </body>
